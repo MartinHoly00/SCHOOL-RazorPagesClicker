@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Clicker test";
+} 
+
+<div class="text-center">
+    <h1 class="display-4">Razor pages clicker</h1>
+    <h2>Current value: <strong>@Model.Value</strong></h2>
+    <a asp-page="/Index" asp-page-handler="Change" asp-route-value="1" asp-route-current="@Model.Value">Add (+1)</a>
+    <a asp-page="/Index" asp-page-handler="Change" asp-route-value="-1" asp-route-current="@Model.Value">Add (-1)</a>
+    <a asp-page="/Index" asp-page-handler="Reset" asp-route-value="0">Reset</a>
+    <p>Set value to specific value</p>
+</div>
