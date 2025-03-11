@@ -11,4 +11,15 @@
     <a asp-page="/Index" asp-page-handler="Change" asp-route-value="-1" asp-route-current="@Model.Value" class="btn btn-secondary">Add (-1)</a>
     <a asp-page="/Index" asp-page-handler="Reset" asp-route-value="0" class="btn btn-danger">Reset</a>
     <p>Set value to specific value</p>
+    <form method="post">
+        <input type="number" asp-for="@Model.Value" maxlength="3" />
+        <button type="submit" class="btn btn-primary">Set value</button>
+    </form>
+    <a href="/Meow">Meow</a>
+    <h2>@Model.Name</h2>
+    <form method="post">
+        <input type="text" asp-for="Name" />
+        <button type="submit">Nastavit</button>
+    </form>
+
 </div>

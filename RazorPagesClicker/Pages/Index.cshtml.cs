@@ -15,6 +15,12 @@ namespace RazorPagesClicker.Pages
         [BindProperty]
         public int Value { get; set; }
 
+        [BindProperty]
+        public int InputValue { get; set; }
+
+        [BindProperty]
+        public string Name { get; set; }
+
         public void OnGet(int value)
         {
             Value = value;

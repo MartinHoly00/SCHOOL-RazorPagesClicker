@@ -1,0 +1,24 @@
+﻿@page
+@model RazorPagesClicker.Pages.MeowModel
+@{
+    ViewData["Title"] = "Meow";
+}
+
+<div>
+    <h1>@ViewData["Title"]</h1>
+    <div>
+        @if(Model.InputValue != null){
+            <form method="post" asp-page-handler="AnotherAction">
+                <input type="hidden" asp-for="InputValue" />
+                <p>Current value: @Model.InputValue</p>
+                <button type="submit">Another Action</button>
+            </form>
+        }
+    </div>
+    <form method="post" asp-page-handler="Show">
+        <label>enter value to show
+            <input asp-for="InputValue" type="text" />
+            <button type="submit">Show</button>
+        </label>
+    </form>
+</div>
